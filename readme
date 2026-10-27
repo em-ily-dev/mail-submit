@@ -1,0 +1,12 @@
+mail-submit sends a single mail message using SMTP over TLS
+
+Usage: mail-submit [to...] <mail
+
+The arguments are the list of envelope recipients.
+
+After reading its config, mail-submit reads an RFCxxx mail message on
+stdin, adds Date and Message-ID header fields, and sends the message
+to its configured server.
+
+It uses SASL PLAIN for authentication and blocks until the server
+confirms receipt of the message.
